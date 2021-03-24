@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">PieBuilder</string>
+    <string name="about">Here at PieBuilder it is our mission to understand our customers by first asking a series of questions in hopes of gaining valuable insights into their level of risk tolerance, financial
+        goals, and expected outcome from their investments. From there, we then give a calculated recommendation on the way they should distribute their capital within the financial markets. This recommendation
+        is based on the users answers to the preliminary questions, and may include things such as stocks, bonds, cryptocurrency and real estate.</string>
+
+    <string name="question_age">How old are you?</string>
+    <string name="question_income">What is your total annual income?</string>
+    <string name="question_net_worth">What is your total net worth (Assets - Liabilities)?</string>
+    <string name="question_objectives">What is your main objective for this portfolio?</string>
+    <string name="question_time_horizon">What is your time horizon?</string>
+    <string name="question_investing_knowledge">How would you describe your investing knowledge?</string>
+    <string name="question_volatility">How would you feel if your portfolio\'s value decreased by 10% in a few weeks?</string>
+    <string name="question_portfolio_growth_decline">If you were to invest $100000, knowing you could gain or lose money, which of these scenarios are you most comfortable with?</string>
+
+    <string name="low_risk_profile">Your answers indicate that you prefer low risk at the cost of less than average but consistent returns. Given this, we recommend a heavy allocation towards fixed income assets
+        such as bonds, GIC\'s, and other fixed income vehicles such as a high interest TFSA</string>
+    <string name="low_risk_holdings"><b>30% Cash</b>\n\n
+                                    <b>50% ETF\'s:</b>\n\n
+                                    Vanguard Canadian Aggregate Bond Index ETF (VAB.TO)\n
+                                    iShares Core Conservative Allocation ETF (AOK)\n
+                                    Vanguard S&amp;P 500 ETF (VOO)\n
+                                    Vanguard Total Stock Market Index Fund ETF Shares (VTI)\n
+                                    \n
+                                    <b>20% Individual Stocks:</b>\n\n
+                                    Canadian National Railway Company (CNR.TO)\n
+                                    Home Depot (HD)\n
+                                    TELUS Corp (T.TO)\n</string>
+    <string name="medium_risk_profile">Your answers indicate that you prefer medium risk to expose yourself to roughly average annual returns. Given this, we recommend a minority allocation to fixed income assets
+    such as bonds, GIC\'s, and other fixed income vehicles such as a high interest TFSA. The majority of your allocation should reside in medium to large cap stocks with a consistent history of growth. The remainder
+    of your capital should be directed to well diversified index funds in an attempt to further diversify and minimize over-exposure to one sector</string>
+    <string name="medium_risk_holdings"><b>20% Cash</b>\n\n
+                                        <b>50% ETF\'s:</b>\n\n
+                                        Vanguard S&amp;P 500 ETF (VOO)\n
+                                        Vanguard Total Stock Market Index Fund ETF Shares (VTI)\n
+                                        Invesco QQQ Trust (QQQ)\n
+                                        Vanguard FTSE Emerging Markets Index Fund ETF Shares (VWO)\n
+                                        \n
+                                        <b>30% Individual Stocks</b>\n\n
+                                        The Walt Disney Company (DIS)\n
+                                        Amazon.com Inc (AMZN)\n
+                                        Walmart Inc (WMT)\n</string>
+    <string name="high_risk_profile">Your answers indicate that you are comfortable with the volatility accompanied with a portfolio that\'s capable of much higher possible returns. Given this, our recommendation would be
+    to first build a high quality foundation of either growth stocks with a large market cap or ETF\'s. This foundation will minimize the volatility but still keep you on track to reach those high potential returns.
+    From there we\'d recommend putting a large portion of capital into speculative, high growth stocks in disruptive sectors like electric vehicles, renewable energy, genomics and fintech. You may also want to consider
+    starting a position in the crypocurrency space. Finally, we also recommend keeping a bit of cash on the side to buy the dip when it inevitablty comes.</string>
+    <string name="high_risk_holdings"><b>10% Cash</b>\n\n
+                                      <b>20% Foundational Stocks and ETF\'s\n\n</b>
+                                      Vanguard S&amp;P 500 ETF (VOO)\n
+                                      Amazon.com Inc (AMZN)\n
+                                      Apple Inc. (AAPL)\n
+                                      Home Depot (HD)\n
+                                      The Walt Disney Company (DIS)\n
+                                      \n
+                                      <b>50% High Growth Stocks</b>
+                                      Tesla Inc (TSLA)\n
+                                      Square Inc (SQ)\n
+                                      Upstart Holdings Inc (UPST)\n
+                                      CRIPSR Therapeutics AG (CRSP)\n
+                                      NIO Limited (NIO)\n
+                                      Palantir Technologies Inc(PLTR)\n
+                                      \n
+                                      <b>20% Cryptocurrecy</b>
+                                      Bitcoin\n
+                                      Ethereum\n
+                                      Aave\n
+                                      Cardano\n</string>
+</resources>

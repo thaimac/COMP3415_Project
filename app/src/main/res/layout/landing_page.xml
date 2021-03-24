@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".LandingPage">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:paddingTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="30dp"
+        android:text="PieBuilder"
+        android:textSize="50dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="392dp"
+        android:layout_height="425dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/pie_main_page"
+        android:layout_below="@id/textView"
+        />
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@color/yellow"
+        android:layout_centerHorizontal="true"
+        android:text="Get Your Pie"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/imageView"/>
+
+    <Button
+        android:id="@+id/learn_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@color/yellow"
+        android:layout_centerHorizontal="true"
+        android:text="Learn More"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/enter"/>
+
+</RelativeLayout>
