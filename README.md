@@ -1,5 +1,5 @@
 # PieBuilder
-### building your financial future one slice at a time
+*building your financial future one slice at a time*
 
 # Table of Contents 
 * Overview
@@ -35,7 +35,9 @@ Our ultimate mission here at PieBuilder is to strip all the clutter and superflu
 
 # Software Design Pattern
 
-The software design pattern utilized in this application was the Model-View-Controller (MVC) paradigm. 
+The software design pattern utilized in this application was the Model-View-Controller (MVC) paradigm. The implementation of this looks as follows:
+
+<img src"/images/MVC.png/>
 
 
 
