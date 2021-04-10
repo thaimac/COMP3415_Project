@@ -2,12 +2,12 @@
 *building your financial future one slice at a time*
 
 # Table of Contents 
-* [Overview]
+* [Overview](#Overview)
 * Objective
 * Our Process
 * Software Design Pattern
 * Operating Instructions 
-* [Next Steps]
+* [Next Steps](#Next-Steps)
 
 # Overview
 
