@@ -22,12 +22,10 @@ class LandingPage : AppCompatActivity() {
         learnMore.setOnClickListener { view: View ->
             val intent = Intent(this, LearnMore::class.java)
             startActivity(intent)
-            Log.i("about us", "learn more clicked")
         }
         enterApp.setOnClickListener { view: View ->
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            Log.i("enter app", "enter app clicked")
         }
     }
 }

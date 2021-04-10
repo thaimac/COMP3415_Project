@@ -19,7 +19,6 @@ class LearnMore : AppCompatActivity() {
         back.setOnClickListener { view: View ->
             val intent = Intent(this, LandingPage::class.java)
             startActivity(intent)
-            Log.i("back to home", "heading back to landing page...")
         }
     }
 }

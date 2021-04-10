@@ -14,7 +14,7 @@ private const val TAG = "MainActivity"
 private const val KEY_INDEX = "index"
 
 class MainActivity : AppCompatActivity() {
-
+    //XML variable set
     private lateinit var questionTextView: TextView
     private lateinit var input: EditText
     private lateinit var multiple_choice: ListView
@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var show_results: Button
     private lateinit var recommendation: TextView
     private lateinit var specific_holdings: TextView
+
+    //Function variable set
     private var i = 0
     private var age = 0
     private var income = 0
@@ -45,20 +47,20 @@ class MainActivity : AppCompatActivity() {
         val currIndex = savedInstanceState?.getInt(KEY_INDEX,0) ?: 0
         appViewModel.currIndex = currIndex
 
+        //link XML components to their corresponding variables
         questionTextView = findViewById(R.id.question_text_view)
         input = findViewById(R.id.user_input)
         submitInput = findViewById(R.id.submit_input)
 
+        //on click listener for text input questions
         submitInput.setOnClickListener { view: View ->
             Log.i("input submitted", "input submitted $i")
             when (i) {
-                0 -> age = Integer.parseInt(input.getText().toString())
-                1 -> income = Integer.parseInt(input.getText().toString())
+                0 -> age = Integer.parseInt(input.getText().toString()) //save user's age
+                1 -> income = Integer.parseInt(input.getText().toString()) // save user's income
                 2 -> {
-                    netWorth = Integer.parseInt(input.getText().toString())
-                    //val user = User(age, income, netWorth)
-                    //Log.i("User info: ", user.toString())
-                    multipleChoice()
+                    netWorth = Integer.parseInt(input.getText().toString()) // save user's net worth
+                    multipleChoice() //function call to present multiple choice questions
                 }
 
             }
@@ -70,12 +72,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Function to display multiple choice questions and save user input
     private fun multipleChoice() {
         setContentView(R.layout.multiple_choice)
 
         submitInputMultChoice = findViewById(R.id.submit_input2)
         questionViewMultChoice = findViewById(R.id.question_text_view2)
 
+        //two dimensional array to hold options for multiple choice questions
         val multChoice: Array<Array<String>> = arrayOf(
             arrayOf(
                 "Preserve capital",
@@ -116,13 +120,15 @@ class MainActivity : AppCompatActivity() {
 
         multiple_choice = findViewById(R.id.user_input_multiple_choice)
         multiple_choice.choiceMode = ListView.CHOICE_MODE_SINGLE
+
+        //use an adapter to display the multiple choice options. Iterate over the 2D array to display
+        //possible answers to each question
         var adapter =
             ArrayAdapter(this, android.R.layout.simple_list_item_activated_1, multChoice[0])
         multiple_choice.adapter = adapter
         multiple_choice.onItemClickListener =
             AdapterView.OnItemClickListener { parent, view, position, id ->
                 objective = parent.getItemAtPosition(position).toString()
-                Log.i("Item selected", "$objective")
                 appViewModel.moveToNext()
                 updateQuestionMultChoice()
                 adapter =
@@ -131,7 +137,6 @@ class MainActivity : AppCompatActivity() {
                 multiple_choice.onItemClickListener =
                     AdapterView.OnItemClickListener { parent, view, position, id ->
                         horizon = parent.getItemAtPosition(position).toString()
-                        Log.i("Item selected", "$horizon")
                         appViewModel.moveToNext()
                         updateQuestionMultChoice()
                         adapter = ArrayAdapter(
@@ -143,7 +148,6 @@ class MainActivity : AppCompatActivity() {
                         multiple_choice.onItemClickListener =
                             AdapterView.OnItemClickListener { parent, view, position, id ->
                                 knowledge = parent.getItemAtPosition(position).toString()
-                                Log.i("Item selected", "$knowledge")
                                 appViewModel.moveToNext()
                                 updateQuestionMultChoice()
                                 adapter = ArrayAdapter(
@@ -155,7 +159,6 @@ class MainActivity : AppCompatActivity() {
                                 multiple_choice.onItemClickListener =
                                     AdapterView.OnItemClickListener { parent, view, position, id ->
                                         volatility = parent.getItemAtPosition(position).toString()
-                                        Log.i("Item selected", "$volatility")
                                         appViewModel.moveToNext()
                                         updateQuestionMultChoice()
                                         adapter = ArrayAdapter(
@@ -167,14 +170,12 @@ class MainActivity : AppCompatActivity() {
                                         multiple_choice.onItemClickListener =
                                             AdapterView.OnItemClickListener { parent, view, position, id ->
                                                 ideal_portfolio = parent.getItemAtPosition(position).toString()
-                                                Log.i("Item selected", "$ideal_portfolio")
+                                                //create User instance with the user's answers
                                                 val user = User(age, income, netWorth, objective, horizon, knowledge, volatility, ideal_portfolio)
-                                                Log.i("User's profile", user.toString())
 
                                                 setContentView(R.layout.get_results)
                                                 show_results = findViewById(R.id.show_results)
                                                 show_results.setOnClickListener { view: View ->
-                                                    Log.i("Results", "Shown here")
                                                     showResults(user)
                                                 }
                                             }
@@ -184,36 +185,24 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
+    //function to update multiple choice question
     private fun updateQuestionMultChoice(){
         val questionTextResId = appViewModel.currentQuestionText
         questionViewMultChoice.setText(questionTextResId)
     }
 
+    //function to update regular question
     private fun updateQuestion(){
         val questionTextResId = appViewModel.currentQuestionText
         questionTextView.setText(questionTextResId)
     }
 
+    //function to recommend a portfolio to the user
     private fun showResults(user: User) {
         setContentView(R.layout.show_results)
         recommendation = findViewById(R.id.asset_alloc)
         specific_holdings = findViewById(R.id.specific_holdings)
         getInvestmentProfile(user)
-        /*
-        if(user.objective == "Preserve capital" || user.horizon == "Less than 1 year" || user.volatility == "That's it, I'm selling everything"
-               || user.ideal_portfolio == "Avoid losses while accepting lower returns. Best case 3.7%. Average 2.26%. Worst case: -3%") {
-            recommendation.setText(R.string.low_risk_profile)
-            specific_holdings.setText(R.string.low_risk_holdings)
-        } else if(user.objective == "Achieve balanced growth with a moderate level of risk" || user.volatility == "It doesn't feel great, but I'm okay" ||
-                user.ideal_portfolio == "Seek medium returns while taking on some risk. Best case 7.8%. Average 6.19%. Worst case: -7%"){
-            recommendation.setText(R.string.medium_risk_profile)
-            specific_holdings.setText(R.string.medium_risk_holdings)
-        } else if(user.objective == "Achieve better than average asset growth" || user.objective == "Maximum asset growth" || user.volatility == "Time to buy" ||
-                 user.volatility == "I expect fluctuations") {
-            recommendation.setText(R.string.high_risk_profile)
-            specific_holdings.setText(R.string.high_risk_holdings)
-        }
-         */
     }
 
     private fun getInvestmentProfile(user: User) {
@@ -282,6 +271,7 @@ class MainActivity : AppCompatActivity() {
             points -= 2
         }
 
+        //fit user into an investment profile based on the number of points
         if(points >= 13) {
             recommendation.setText(R.string.high_risk_profile)
             specific_holdings.setText(R.string.high_risk_holdings)
