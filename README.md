@@ -3,10 +3,10 @@
 
 # Table of Contents 
 * [Overview](#Overview)
-* Objective
-* Our Process
-* Software Design Pattern
-* Operating Instructions 
+* [Objective](#Objective)
+* [Our Process](#Our-Process)
+* [Software Design Pattern](#Software-Design-Pattern)
+* [Operating Instructions](#Operating-Instructions)
 * [Next Steps](#Next-Steps)
 
 # Overview
