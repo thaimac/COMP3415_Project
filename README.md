@@ -5,7 +5,8 @@
 * Overview
 * Objective
 * Our Process
-* Software Design Pattern 
+* Software Design Pattern
+* Operating Instructions 
 
 # Overview
 
@@ -38,6 +39,24 @@ Our ultimate mission here at PieBuilder is to strip all the clutter and superflu
 The software design pattern utilized in this application was the Model-View-Controller (MVC) paradigm. The implementation of this looks as follows:
 
 <div align=center><img src="/images/MVC.png" /></div>
+
+# Operation Instructions
+
+The operation instructions for this app are as follows:
+
+1. Main Page
+
+Here you have 2 options 
+  a) Learn more about our app and its objective by clicking *Learn More*, or,
+  b) Begin answering questions on the way to getting your personalized results by selecting *Get your pie*
+ 
+2. Question Sequence
+
+Answer our series of questions, one by one, to obtain your results. Upon answering the last question you will be presented with the final screen before results are shown. Click *Get results* to obtain your personalized portfolio
+
+3. Portfolio Reveal 
+
+This is the section of the app where you'll be provided with your personalized portfolio recommendation. It begins by explaining our results and giving an overview of the chosen holdings. Below this section will be the categorized distribution of holddings with recommendations for each. 
 
 
 
