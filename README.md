@@ -37,7 +37,7 @@ Our ultimate mission here at PieBuilder is to strip all the clutter and superflu
 
 The software design pattern utilized in this application was the Model-View-Controller (MVC) paradigm. The implementation of this looks as follows:
 
-<img src"/images/MVC.png/>
+<img src"./images/MVC.png/>
 
 
 
