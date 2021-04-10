@@ -198,7 +198,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.show_results)
         recommendation = findViewById(R.id.asset_alloc)
         specific_holdings = findViewById(R.id.specific_holdings)
-
+        getInvestmentProfile(user)
+        /*
         if(user.objective == "Preserve capital" || user.horizon == "Less than 1 year" || user.volatility == "That's it, I'm selling everything"
                || user.ideal_portfolio == "Avoid losses while accepting lower returns. Best case 3.7%. Average 2.26%. Worst case: -3%") {
             recommendation.setText(R.string.low_risk_profile)
@@ -211,6 +212,85 @@ class MainActivity : AppCompatActivity() {
                  user.volatility == "I expect fluctuations") {
             recommendation.setText(R.string.high_risk_profile)
             specific_holdings.setText(R.string.high_risk_holdings)
+        }
+         */
+    }
+
+    private fun getInvestmentProfile(user: User) {
+        var points = 0
+
+        //points for age
+        if(user.age > 0 && user.age <= 30) {
+            points += 3
+        } else if(user.age > 30 && user.age <= 40) {
+            points += 2
+        } else if(user.age > 40 && user.age <= 50) {
+            points += 1
+        } else if(user.age > 50) {
+            points += 0
+        }
+
+        //points for horizon
+        if(user.horizon == "15+ years") {
+            points += 4
+        } else if(user.horizon == "10-14 years") {
+            points += 3
+        } else if(user.horizon == "5-9 years") {
+            points += 2
+        } else if(user.horizon == "1-4 years") {
+            points += 1
+        } else if(user.horizon == "Less than 1 year") {
+            points -= 5
+        }
+
+        //points for objective
+        if(user.objective == "Maximum asset growth") {
+            points += 4
+        } else if(user.objective == "Achieve better than average asset growth") {
+            points += 3
+        } else if(user.objective == "Achieve balanced growth with a moderate level of risk") {
+            points += 2
+        } else if(user.objective == "Have a steady stream of income") {
+            points += 1
+        } else if(user.objective == "Preserve capital") {
+            points += 0
+        }
+
+        //points for volatility
+        if(user.volatility == "Time to buy") {
+            points += 4
+        } else if(user.volatility == "I expect fluctuations") {
+            points += 3
+        } else if(user.volatility == "It's all good") {
+            points += 2
+        } else if(user.volatility == "It doesn't feel great, but I'm okay") {
+            points += 1
+        } else if(user.volatility == "That's it, I'm selling everything") {
+            points -= 3
+        }
+
+        //points for ideal portfolio
+        if(user.ideal_portfolio == "Maximize returns while accepting large account value fluctuation. Best case 17.2%. Average 10.05%. Worst case: -15.6%") {
+            points += 5
+        } else if(user.ideal_portfolio == "Seek greater returns while taking on more risk. Best case 12.1%. Average 7.47%. Worst case: -10.8%") {
+            points += 3
+        } else if(user.ideal_portfolio == "Seek medium returns while taking on some risk. Best case 7.8%. Average 6.19%. Worst case: -7%") {
+            points += 2
+        } else if(user.ideal_portfolio == "Keep risk low while seeking modest returns. Best case 5.6%. Average 3.86%. Worst case: -4.8%") {
+            points += 1
+        } else if(user.ideal_portfolio == "Avoid losses while accepting lower returns. Best case 3.7%. Average 2.26%. Worst case: -3%") {
+            points -= 2
+        }
+
+        if(points >= 13) {
+            recommendation.setText(R.string.high_risk_profile)
+            specific_holdings.setText(R.string.high_risk_holdings)
+        } else if(points < 13 && points >= 5) {
+            recommendation.setText(R.string.medium_risk_profile)
+            specific_holdings.setText(R.string.medium_risk_holdings)
+        } else if(points < 5) {
+            recommendation.setText(R.string.low_risk_profile)
+            specific_holdings.setText(R.string.low_risk_holdings)
         }
     }
 }
