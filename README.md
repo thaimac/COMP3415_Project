@@ -7,6 +7,7 @@
 * [Our Process](#Our-Process)
 * [Software Design Pattern](#Software-Design-Pattern)
 * [Operating Instructions](#Operating-Instructions)
+* [Investment Profile Matching](#Investment-Profile-Matching)
 * [Next Steps](#Next-Steps)
 
 # Overview
