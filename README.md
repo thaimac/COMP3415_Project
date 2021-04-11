@@ -59,6 +59,14 @@ Answer our series of questions, one by one, to obtain your results. Upon answeri
 
 This is the section of the app where you'll be provided with your personalized portfolio recommendation. It begins by explaining our results and giving an overview of the chosen holdings. Below this section will be the categorized distribution of holddings with recommendations for each. 
 
+# Investment Profile Matching
+
+Although many methods for matching a user with a certain investment profile were considered, the one that proved to be the most accurate and considerate was that of a point system. This system assigns a certain number of points to each answer - or range of answers (in the case of age, etc) - and tally's them up at the end. The result of this tallying is what will be used to fit a user into a certain investment profile. 
+
+For example, if a user exhibits a very conservative and risk averse personality, then the end result of their answers will be a low number of points. In the point system, a low number of point implies a low risk tolerance and a conservative investment personality. As such, this particular user will be presented with a number of low risk investments. On the contrary, if a user appears to be comfortable with a higher level of risk taking, then the back end will assign more points to their answers and they will be presented with a number of higher risk investments. 
+
+Variables such as age and time horizon also play a role in the point system, since, if your older or if your time horizon is miniscule, then high risk investments are not advisable since they are accompanied by significant volatility, and it is anyone's guess as to what side of the swing (high or low) the asset will be on when the user needs to withdraw their money. So older age and a shorter time horizon are characterized by lower points, while a younger age and longer time horizon are characterized by higher ones.
+
 # Next Steps 
 
 Your results are no good without a way to act on them! Below are some links to some reputable brokerages in both the crpytocurrency and public equity markets:
