@@ -8,13 +8,16 @@ class AppViewModel : ViewModel() {
     var currIndex = 0
     private val questionBank = listOf(
             Question(R.string.question_age),
-            Question(R.string.question_income),
-            Question(R.string.question_net_worth),
-            Question(R.string.question_objectives),
-            Question(R.string.question_time_horizon),
-            Question(R.string.question_investing_knowledge),
-            Question(R.string.question_volatility),
-            Question(R.string.question_portfolio_growth_decline)
+            Question(R.string.question_height),
+            Question(R.string.question_weight),
+            Question(R.string.question_target_weight),
+            Question(R.string.question_workout_length),
+            Question(R.string.question_workout_frequency),
+            Question(R.string.question_fitness_level),
+            Question(R.string.question_build_goal),
+            Question(R.string.question_workout_area),
+            Question(R.string.question_weights),
+            Question(R.string.question_gym)
     )
 
     val currentQuestionText: Int

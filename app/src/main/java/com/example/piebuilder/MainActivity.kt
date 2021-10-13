@@ -28,13 +28,19 @@ class MainActivity : AppCompatActivity() {
     //Function variable set
     private var i = 0
     private var age = 0
-    private var income = 0
-    private var netWorth = 0
-    private var objective = ""
-    private var horizon = ""
-    private var knowledge = ""
-    private var volatility = ""
-    private var ideal_portfolio = ""
+    private var height = 0
+    private var weight = 0
+    private var targetWeight = 0
+    private var length = ""
+    private var frequency = ""
+    private var fitnessLevelNow = ""
+    private var buildGoal = ""
+    private var workoutArea = ""
+    private var weights = ""
+    private var gym = ""
+
+    private var weightDiff = 0  // for finding the difference between current and target weight
+
 
     private val appViewModel: AppViewModel by lazy{
         ViewModelProviders.of(this).get(AppViewModel::class.java)
@@ -57,12 +63,12 @@ class MainActivity : AppCompatActivity() {
             Log.i("input submitted", "input submitted $i")
             when (i) {
                 0 -> age = Integer.parseInt(input.getText().toString()) //save user's age
-                1 -> income = Integer.parseInt(input.getText().toString()) // save user's income
-                2 -> {
-                    netWorth = Integer.parseInt(input.getText().toString()) // save user's net worth
+                1 -> height = Integer.parseInt(input.getText().toString()) // save user's height (need to make float)
+                2 -> weight = Integer.parseInt(input.getText().toString()) // save user's weight (need to make float)
+                3 -> {
+                    targetWeight = Integer.parseInt(input.getText().toString()) // save user's target weight (need to make float)
                     multipleChoice() //function call to present multiple choice questions
                 }
-
             }
             i++
             input.setText("")
@@ -81,40 +87,51 @@ class MainActivity : AppCompatActivity() {
 
         //two dimensional array to hold options for multiple choice questions
         val multChoice: Array<Array<String>> = arrayOf(
-            arrayOf(
-                "Preserve capital",
-                "Have a steady stream of income",
-                "Achieve balanced growth with a moderate level of risk",
-                "Achieve better than average asset growth",
-                "Maximum asset growth"
+            arrayOf(  // for workout length
+                "30 minutes or less",
+                "1 hour",
+                "1.5 - 2 hours",
+                "3 hours",
+                "More than 3 hours"
             ),
-            arrayOf(
-                "Less than 1 year",
-                "1-4 years",
-                "5-9 years",
-                "10-14 years",
-                "15+ years"
+            arrayOf(  // for workout frequency
+                "1 day per week",
+                "2 days per week",
+                "3 days per week",
+                "4 days per week",
+                "5 days per week",
+                "6 days per week",
+                "Every day"
             ),
-            arrayOf(
-                "Novice",
-                "Fairly familiar",
-                "Comfortable",
-                "Fairly knowledgeable",
-                "Expert"
+            arrayOf(  // for fitness level now
+                "Do not work out much at all",
+                "Okay (work out once a month or so)",
+                "Average (work out once every few weeks)",
+                "Fairly fit (work out once every week, maybe with routines)",
+                "Very fit (work out often, have routines, etc.)"
             ),
-            arrayOf(
-                "That's it, I'm selling everything",
-                "It doesn't feel great, but I'm okay",
-                "It's all good",
-                "I expect fluctuations",
-                "Time to buy"
+            arrayOf(  // for build goal
+                "Endurance",
+                "Strength",
+                "Stamina",
+                "Etc",
+                "Etc"
             ),
-            arrayOf(
-                "Avoid losses while accepting lower returns. Best case 3.7%. Average 2.26%. Worst case: -3%",
-                "Keep risk low while seeking modest returns. Best case 5.6%. Average 3.86%. Worst case: -4.8%",
-                "Seek medium returns while taking on some risk. Best case 7.8%. Average 6.19%. Worst case: -7%",
-                "Seek greater returns while taking on more risk. Best case 12.1%. Average 7.47%. Worst case: -10.8%",
-                "Maximize returns while accepting large account value fluctuation. Best case 17.2%. Average 10.05%. Worst case: -15.6%"
+            arrayOf(  // for workout area
+                "Core",
+                "Cardio",
+                "Flexibility",
+                "Lower Body",
+                "Upper Body",
+                "Full Body"
+            ),
+            arrayOf(  // for workout with or without weights
+                "With Weights",
+                "Without Weights"
+            ),
+            arrayOf(  // for in a gym vs at home
+                "In a gym (with machines)",
+                "At home (without machines)"
             )
         )
 
@@ -128,7 +145,7 @@ class MainActivity : AppCompatActivity() {
         multiple_choice.adapter = adapter
         multiple_choice.onItemClickListener =
             AdapterView.OnItemClickListener { parent, view, position, id ->
-                objective = parent.getItemAtPosition(position).toString()
+                length = parent.getItemAtPosition(position).toString()
                 appViewModel.moveToNext()
                 updateQuestionMultChoice()
                 adapter =
@@ -136,7 +153,7 @@ class MainActivity : AppCompatActivity() {
                 multiple_choice.adapter = adapter
                 multiple_choice.onItemClickListener =
                     AdapterView.OnItemClickListener { parent, view, position, id ->
-                        horizon = parent.getItemAtPosition(position).toString()
+                        frequency = parent.getItemAtPosition(position).toString()
                         appViewModel.moveToNext()
                         updateQuestionMultChoice()
                         adapter = ArrayAdapter(
@@ -147,7 +164,7 @@ class MainActivity : AppCompatActivity() {
                         multiple_choice.adapter = adapter
                         multiple_choice.onItemClickListener =
                             AdapterView.OnItemClickListener { parent, view, position, id ->
-                                knowledge = parent.getItemAtPosition(position).toString()
+                                fitnessLevelNow = parent.getItemAtPosition(position).toString()
                                 appViewModel.moveToNext()
                                 updateQuestionMultChoice()
                                 adapter = ArrayAdapter(
@@ -158,7 +175,7 @@ class MainActivity : AppCompatActivity() {
                                 multiple_choice.adapter = adapter
                                 multiple_choice.onItemClickListener =
                                     AdapterView.OnItemClickListener { parent, view, position, id ->
-                                        volatility = parent.getItemAtPosition(position).toString()
+                                        buildGoal = parent.getItemAtPosition(position).toString()
                                         appViewModel.moveToNext()
                                         updateQuestionMultChoice()
                                         adapter = ArrayAdapter(
@@ -169,15 +186,52 @@ class MainActivity : AppCompatActivity() {
                                         multiple_choice.adapter = adapter
                                         multiple_choice.onItemClickListener =
                                             AdapterView.OnItemClickListener { parent, view, position, id ->
-                                                ideal_portfolio = parent.getItemAtPosition(position).toString()
-                                                //create User instance with the user's answers
-                                                val user = User(age, income, netWorth, objective, horizon, knowledge, volatility, ideal_portfolio)
+                                                workoutArea =
+                                                    parent.getItemAtPosition(position).toString()
+                                                appViewModel.moveToNext()
+                                                updateQuestionMultChoice()
+                                                adapter = ArrayAdapter(
+                                                    this,
+                                                    android.R.layout.simple_list_item_activated_1,
+                                                    multChoice[5]
+                                                )
+                                                multiple_choice.adapter = adapter
+                                                multiple_choice.onItemClickListener =
+                                                    AdapterView.OnItemClickListener { parent, view, position, id ->
+                                                        weights = parent.getItemAtPosition(position)
+                                                            .toString()
+                                                        appViewModel.moveToNext()
+                                                        updateQuestionMultChoice()
+                                                        adapter = ArrayAdapter(
+                                                            this,
+                                                            android.R.layout.simple_list_item_activated_1,
+                                                            multChoice[6]
+                                                        )
+                                                        multiple_choice.adapter = adapter
+                                                        multiple_choice.onItemClickListener =
+                                                            AdapterView.OnItemClickListener { parent, view, position, id ->
+                                                                gym = parent.getItemAtPosition(position)
+                                                                    .toString()
+                                                                //create User instance with the user's answers
+                                                                val user = User(
+                                                                    age,
+                                                                    height,
+                                                                    weight,
+                                                                    length,
+                                                                    frequency,
+                                                                    fitnessLevelNow,
+                                                                    buildGoal,
+                                                                    workoutArea
+                                                                )
 
-                                                setContentView(R.layout.get_results)
-                                                show_results = findViewById(R.id.show_results)
-                                                show_results.setOnClickListener { view: View ->
-                                                    showResults(user)
-                                                }
+                                                                setContentView(R.layout.get_results)
+                                                                show_results =
+                                                                    findViewById(R.id.show_results)
+                                                                show_results.setOnClickListener { view: View ->
+                                                                    showResults(user)
+                                                                }
+                                                            }
+                                                    }
                                             }
                                     }
                             }

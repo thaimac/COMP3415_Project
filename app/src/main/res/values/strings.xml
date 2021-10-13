@@ -1,17 +1,23 @@
 <resources>
-    <string name="app_name">PieBuilder</string>
+    <string name="app_name">Workout Builder</string>
     <string name="about">Here at PieBuilder it is our mission to understand our customers by first asking a series of questions in hopes of gaining valuable insights into their level of risk tolerance, financial
         goals, and expected outcome from their investments. From there, we then give a calculated recommendation on the way they should distribute their capital within the financial markets. This recommendation
         is based on the users answers to the preliminary questions, and may include things such as stocks, bonds, cryptocurrency and real estate.</string>
 
+
     <string name="question_age">How old are you?</string>
-    <string name="question_income">What is your total annual income?</string>
-    <string name="question_net_worth">What is your total net worth (Assets - Liabilities)?</string>
-    <string name="question_objectives">What is your main objective for this portfolio?</string>
-    <string name="question_time_horizon">What is your time horizon?</string>
-    <string name="question_investing_knowledge">How would you describe your investing knowledge?</string>
-    <string name="question_volatility">How would you feel if your portfolio\'s value decreased by 10% in a few weeks?</string>
-    <string name="question_portfolio_growth_decline">If you were to invest $100000, knowing you could gain or lose money, which of these scenarios are you most comfortable with?</string>
+    <string name="question_height">What is your height (in cm)?</string>
+    <string name="question_weight">What is your weight (in kg)?</string>
+    <string name="question_target_weight">What is your target weight (in kg)?</string>
+
+    <string name="question_workout_length">How long do you want to work out for per session?</string>
+    <string name="question_workout_frequency">How many days per week do you want to work out?</string>
+    <string name="question_fitness_level">What is your fitness level now (how often do you work out)?</string>
+    <string name="question_build_goal">What is your build goal?</string>
+    <string name="question_workout_area">What area do you want to work out?</string>
+    <string name="question_weights">Would you like to workout with or without weights?</string>
+    <string name="question_gym">Are you working out in a gym (with machines) or at home (without machines)?</string>
+
 
     <string name="low_risk_profile">Your answers indicate that you prefer low risk at the cost of less than average but consistent returns. Given this, we recommend a heavy allocation towards fixed income assets
         such as bonds, GIC\'s, and other fixed income vehicles such as a high interest TFSA</string>
