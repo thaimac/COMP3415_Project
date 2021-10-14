@@ -113,9 +113,7 @@ class MainActivity : AppCompatActivity() {
             arrayOf(  // for build goal
                 "Endurance",
                 "Strength",
-                "Stamina",
-                "Etc",
-                "Etc"
+                "Stamina"
             ),
             arrayOf(  // for workout area
                 "Core",
