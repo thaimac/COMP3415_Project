@@ -186,8 +186,7 @@ class MainActivity : AppCompatActivity() {
                                         multiple_choice.adapter = adapter
                                         multiple_choice.onItemClickListener =
                                             AdapterView.OnItemClickListener { parent, view, position, id ->
-                                                workoutArea =
-                                                    parent.getItemAtPosition(position).toString()
+                                                workoutArea = parent.getItemAtPosition(position).toString()
                                                 appViewModel.moveToNext()
                                                 updateQuestionMultChoice()
                                                 adapter = ArrayAdapter(
@@ -198,8 +197,7 @@ class MainActivity : AppCompatActivity() {
                                                 multiple_choice.adapter = adapter
                                                 multiple_choice.onItemClickListener =
                                                     AdapterView.OnItemClickListener { parent, view, position, id ->
-                                                        weights = parent.getItemAtPosition(position)
-                                                            .toString()
+                                                        weights = parent.getItemAtPosition(position).toString()
                                                         appViewModel.moveToNext()
                                                         updateQuestionMultChoice()
                                                         adapter = ArrayAdapter(
@@ -210,18 +208,20 @@ class MainActivity : AppCompatActivity() {
                                                         multiple_choice.adapter = adapter
                                                         multiple_choice.onItemClickListener =
                                                             AdapterView.OnItemClickListener { parent, view, position, id ->
-                                                                gym = parent.getItemAtPosition(position)
-                                                                    .toString()
+                                                                gym = parent.getItemAtPosition(position).toString()
                                                                 //create User instance with the user's answers
                                                                 val user = User(
                                                                     age,
                                                                     height,
                                                                     weight,
+                                                                    targetWeight,
                                                                     length,
                                                                     frequency,
                                                                     fitnessLevelNow,
                                                                     buildGoal,
-                                                                    workoutArea
+                                                                    workoutArea,
+                                                                    weights,
+                                                                    gym
                                                                 )
 
                                                                 setContentView(R.layout.get_results)
@@ -272,7 +272,7 @@ class MainActivity : AppCompatActivity() {
         } else if(user.age > 50) {
             points += 0
         }
-
+/*
         //points for horizon
         if(user.horizon == "15+ years") {
             points += 4
@@ -324,7 +324,7 @@ class MainActivity : AppCompatActivity() {
         } else if(user.ideal_portfolio == "Avoid losses while accepting lower returns. Best case 3.7%. Average 2.26%. Worst case: -3%") {
             points -= 2
         }
-
+*/
         //fit user into an investment profile based on the number of points
         if(points >= 13) {
             recommendation.setText(R.string.high_risk_profile)
