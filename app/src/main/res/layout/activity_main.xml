@@ -12,20 +12,22 @@
         android:id="@+id/question_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textSize="24sp"
         android:layout_centerHorizontal="true"
-        android:paddingTop="200dp"
-        android:text="@string/question_age" />
+        android:gravity="center"
+        android:paddingTop="150dp"
+        android:text="@string/question_age"
+        android:textAlignment="center"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/user_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/question_text_view"
-        android:paddingTop="20dp"
-        android:inputType="text" />
+        android:inputType="text"
+        android:paddingTop="30dp"
+        android:textSize="24sp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/submit_input"

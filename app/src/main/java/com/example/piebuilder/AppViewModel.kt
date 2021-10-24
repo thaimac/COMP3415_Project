@@ -23,6 +23,9 @@ class AppViewModel : ViewModel() {
     val currentQuestionText: Int
         get() = questionBank[currIndex].textResId
 
+    val questionOne: Int
+        get() = questionBank[0].textResId
+
     fun moveToNext() {
         currIndex++
     }

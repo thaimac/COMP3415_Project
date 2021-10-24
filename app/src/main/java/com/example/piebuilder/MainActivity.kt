@@ -139,7 +139,11 @@ class MainActivity : AppCompatActivity() {
         //use an adapter to display the multiple choice options. Iterate over the 2D array to display
         //possible answers to each question
         var adapter =
-            ArrayAdapter(this, android.R.layout.simple_list_item_activated_1, multChoice[0])
+            ArrayAdapter(
+                this,
+                android.R.layout.simple_list_item_activated_1,
+                multChoice[0]
+            )
         multiple_choice.adapter = adapter
         multiple_choice.onItemClickListener =
             AdapterView.OnItemClickListener { parent, view, position, id ->
@@ -147,7 +151,11 @@ class MainActivity : AppCompatActivity() {
                 appViewModel.moveToNext()
                 updateQuestionMultChoice()
                 adapter =
-                    ArrayAdapter(this, android.R.layout.simple_list_item_activated_1, multChoice[1])
+                    ArrayAdapter(
+                        this,
+                        android.R.layout.simple_list_item_activated_1,
+                        multChoice[1]
+                    )
                 multiple_choice.adapter = adapter
                 multiple_choice.onItemClickListener =
                     AdapterView.OnItemClickListener { parent, view, position, id ->
