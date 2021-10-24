@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:paddingTop="100dp"
         android:text="@string/question_workout_length"
         android:textAlignment="center"
@@ -28,9 +28,10 @@
     <ListView
         android:id="@+id/user_input_multiple_choice"
         android:layout_width="wrap_content"
-        android:layout_height="350dp"
+        android:layout_height="355dp"
         android:layout_below="@id/question_text_view2"
-        android:choiceMode="singleChoice" />
+        android:choiceMode="singleChoice"
+        android:paddingTop="10dp" />
 
 
     <Button
@@ -39,9 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/user_input_multiple_choice"
         android:layout_centerHorizontal="true"
-        android:insetTop="12dp"
+        android:insetTop="8dp"
         android:text="Next"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="invisible" />
 
 </RelativeLayout>
