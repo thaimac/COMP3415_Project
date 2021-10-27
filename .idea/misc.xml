@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Tyler/AndroidStudioProjects/COMP3415_Project/app/src/main/res/layout/get_results.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Tyler/AndroidStudioProjects/COMP3415_Project/app/src/main/res/layout/landing_page.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Tyler/AndroidStudioProjects/COMP3415_Project/app/src/main/res/layout/learn_more.xml" value="0.13269927536231885" />
+        <entry key="..\:/Users/Tyler/AndroidStudioProjects/COMP3415_Project/app/src/main/res/layout/show_results.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/laury/AndroidStudioProjects/COMP3415_Project/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/laury/AndroidStudioProjects/COMP3415_Project/app/src/main/res/layout/multiple_choice.xml" value="0.16666666666666666" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
