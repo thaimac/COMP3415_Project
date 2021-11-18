@@ -25,19 +25,32 @@
     <string name="question_gym">Are you working out in a gym (with machines) or at home (without machines)?</string>
 
 
-    <string name="low_risk_profile">Your answers indicate that you prefer low risk at the cost of less than average but consistent returns. Given this, we recommend a heavy allocation towards fixed income assets
-        such as bonds, GIC\'s, and other fixed income vehicles such as a high interest TFSA</string>
-    <string name="low_risk_holdings"><b>30% Cash</b>\n\n
-                                    <b>50% ETF\'s:</b>\n\n
-                                    Vanguard Canadian Aggregate Bond Index ETF (VAB.TO)\n
-                                    iShares Core Conservative Allocation ETF (AOK)\n
-                                    Vanguard S&amp;P 500 ETF (VOO)\n
-                                    Vanguard Total Stock Market Index Fund ETF Shares (VTI)\n
+    <string name="low_risk_profile">Your answers indicate that, although you aspire to biuld muscle and strength, you are
+    limited in the amount of time you can devote to exercise. As such, we believe that the following workout plan
+    is best suited for your current situation</string>
+    <string name="low_risk_holdings"><b>Full body split - 3 days a week</b>\n\n
+                                    <b>Workout 1:</b>\n\n
+                                    Bench Press\n
+                                    Pull ups\n
+                                    Squats\n
+                                    Shoulder Press\n
+                                    Incline Dumbbell Curls\n
+                                    Tricep Pulldown\n
                                     \n
-                                    <b>20% Individual Stocks:</b>\n\n
-                                    Canadian National Railway Company (CNR.TO)\n
-                                    Home Depot (HD)\n
-                                    TELUS Corp (T.TO)\n</string>
+                                    <b>Workout 2:</b>\n\n
+                                    Deadlift\n
+                                    Dips\n
+                                    Bent Over Rows\n
+                                    Dumbbell Lateral Raise\n
+                                    Barbell Bicep Curl\n
+                                    \n
+                                    <b>Workout 3:</b>\n\n
+                                    Squats\n
+                                    Shoulder Press\n
+                                    Pec Deck\n
+                                    Dumbbell Rear Delt Fly\n
+                                    Hammer Curls\n
+                                    Skullcrushers\n</string>
     <string name="medium_risk_profile">Your answers indicate that you prefer medium risk to expose yourself to roughly average annual returns. Given this, we recommend a minority allocation to fixed income assets
     such as bonds, GIC\'s, and other fixed income vehicles such as a high interest TFSA. The majority of your allocation should reside in medium to large cap stocks with a consistent history of growth. The remainder
     of your capital should be directed to well diversified index funds in an attempt to further diversify and minimize over-exposure to one sector</string>
