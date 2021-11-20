@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/background"
+    tools:ignore="ExtraText">>
+
 
     <Button
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="back"
-        android:textColor="@color/white" />
+        android:text="Back"
+        android:textColor="@color/white"
+        app:backgroundTint="#0C0101" />
+
 
     <TextView
         android:id="@+id/question_text_view2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="389dp"
+        android:layout_height="205dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="#3A3C3C"
         android:gravity="center"
-        android:paddingTop="100dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:text="@string/question_workout_length"
         android:textAlignment="center"
+        android:textColor="#F3EFEF"
         android:textSize="28sp" />
 
     <ListView
@@ -30,9 +41,11 @@
         android:layout_width="wrap_content"
         android:layout_height="355dp"
         android:layout_below="@id/question_text_view2"
+        android:layout_marginTop="40dp"
+        android:background="#B5003D"
         android:choiceMode="singleChoice"
-        android:paddingTop="10dp" />
-
+        android:paddingTop="10dp"
+        android:textColor="#E4DEDE" />
 
     <Button
         android:id="@+id/submit_input2"
@@ -42,7 +55,7 @@
         android:layout_centerHorizontal="true"
         android:insetTop="8dp"
         android:text="Next"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:visibility="invisible" />
 
