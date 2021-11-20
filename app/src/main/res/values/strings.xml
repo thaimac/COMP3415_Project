@@ -51,43 +51,82 @@
                                     Dumbbell Rear Delt Fly\n
                                     Hammer Curls\n
                                     Skullcrushers\n</string>
-    <string name="medium_risk_profile">Your answers indicate that you prefer medium risk to expose yourself to roughly average annual returns. Given this, we recommend a minority allocation to fixed income assets
-    such as bonds, GIC\'s, and other fixed income vehicles such as a high interest TFSA. The majority of your allocation should reside in medium to large cap stocks with a consistent history of growth. The remainder
-    of your capital should be directed to well diversified index funds in an attempt to further diversify and minimize over-exposure to one sector</string>
-    <string name="medium_risk_holdings"><b>20% Cash</b>\n\n
-                                        <b>50% ETF\'s:</b>\n\n
-                                        Vanguard S&amp;P 500 ETF (VOO)\n
-                                        Vanguard Total Stock Market Index Fund ETF Shares (VTI)\n
-                                        Invesco QQQ Trust (QQQ)\n
-                                        Vanguard FTSE Emerging Markets Index Fund ETF Shares (VWO)\n
+    <string name="medium_risk_profile">Your answers indicate that, although you are able to spend more time in the gym than some,
+    yuour time is still limited to some degree. As such, the plan we believe would best fit your lifestyle is as follows:</string>
+    <string name="medium_risk_holdings"><b>Upper/Lower Split - 4 days a week</b>\n\n
+                                        <b>Upper 1</b>\n\n
+                                        Bench Press\n
+                                        Bent Over Row\n
+                                        Shoulder Press\n
+                                        Hercules Curl\n
+                                        Dips\n
                                         \n
-                                        <b>30% Individual Stocks</b>\n\n
-                                        The Walt Disney Company (DIS)\n
-                                        Amazon.com Inc (AMZN)\n
-                                        Walmart Inc (WMT)\n</string>
-    <string name="high_risk_profile">Your answers indicate that you are comfortable with the volatility accompanied with a portfolio that\'s capable of much higher possible returns. Given this, our recommendation would be
-    to first build a high quality foundation of either growth stocks with a large market cap or ETF\'s. This foundation will minimize the volatility but still keep you on track to reach those high potential returns.
-    From there we\'d recommend putting a large portion of capital into speculative, high growth stocks in disruptive sectors like electric vehicles, renewable energy, genomics and fintech. You may also want to consider
-    starting a position in the crypocurrency space. Finally, we also recommend keeping a bit of cash on the side to buy the dip when it inevitablty comes.</string>
-    <string name="high_risk_holdings"><b>10% Cash</b>\n\n
-                                      <b>20% Foundational Stocks and ETF\'s\n\n</b>
-                                      Vanguard S&amp;P 500 ETF (VOO)\n
-                                      Amazon.com Inc (AMZN)\n
-                                      Apple Inc. (AAPL)\n
-                                      Home Depot (HD)\n
-                                      The Walt Disney Company (DIS)\n
+                                        <b>Lower 1</b>\n\n
+                                        Leg extensions\n
+                                        Straight Legged Deadlifts\n
+                                        Hip Thrusts\n
+                                        Calf Raises\n
+                                        \n
+                                        <b>Upper 2</b>\n\n
+                                        Cable Crossovers\n
+                                        Pull ups
+                                        Arnold Press
+                                        Hammer Curls
+                                        Tricep Pulldown\n
+                                        \n
+                                        <b>Lower 2</b>\n\n
+                                        Squats\n
+        `                               Bulgarian Split Squats\n
+                                        Calf Raises\n
+                                        Barbell Walking Lunges</string>
+    <string name="high_risk_profile">Your answers indicate that you hope to gain as much strength and muscle as possible and that time is no issue.
+    Given this, we believe that the following program will fit your lifestyle the best. It will have you in the gym 6 days a
+    week with each muscle group being hit twice per week.</string>
+    <string name="high_risk_holdings"><b>Chest/Tri's, Back/Bi's, Shoulders/Legs x2 per week</b>\n\n
+                                      <b>Chest and Triceps 1</b>
+                                      Bench Press\n
+                                      Cable Crossovers\n
+                                      Dumbbell Pullovers\n
+                                      Tricep Pulldowns\n
+                                      Skullcrushers\n
+                                      Close grip bench press\n
                                       \n
-                                      <b>50% High Growth Stocks</b>\n\n
-                                      Tesla Inc (TSLA)\n
-                                      Square Inc (SQ)\n
-                                      Upstart Holdings Inc (UPST)\n
-                                      CRIPSR Therapeutics AG (CRSP)\n
-                                      NIO Limited (NIO)\n
-                                      Palantir Technologies Inc(PLTR)\n
+                                      <b>Back and Biceps 1</b>\n\n
+                                      Deadlifts\n
+                                      Bent over rows\n
+                                      Lat Pulldowm\n
+                                      Hammer curls\n
+                                      Preacher curls\n
+                                      Hercules Curls\n
                                       \n
-                                      <b>20% Cryptocurrecy</b>\n\n
-                                      Bitcoin\n
-                                      Ethereum\n
-                                      Aave\n
-                                      Cardano\n</string>
+                                      <b>Shoulder and Legs 1</b>\n\n
+                                      Squats\n
+                                      Shoulder Press\n
+                                      Bulgarian Split Squats\n
+                                      Rear Delt Flies\n
+                                      Arnold Press\n
+                                      Leg Extensions\n
+                                      Hamstring Curls\n
+                                      \n
+                                      <b>Chest and Triceps 2</b>\n\n
+                                      Incline bench press\n
+                                      Dumbbell flies\n
+                                      Dips\n
+                                      Tricep extension\n
+                                      Diamond push ups\n
+                                      <b>Back and Biceps 2</b>\n\n
+                                      One arm dumbbell row\n
+                                      Standing lat pull\n
+                                      Inverted rows\n
+                                      Dumbbell bicep curl with isometric hold\n
+                                      Reverse grip bicep curl\n
+                                      Chin up\n
+                                      \n
+                                      <b>Shoulders and Legs 2</b>\n\n
+                                      Leg Press\n
+                                      Hack Squat\n
+                                      Hip Thrust\n
+                                      Arnold Press\n
+                                      Lateral Raise\n
+                                      Face pull\n</string>
 </resources>
