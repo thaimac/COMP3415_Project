@@ -1,4 +1,4 @@
-package com.example.piebuilder
+package com.example.workoutbuilder
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.example.piebuilder
+package com.example.workoutbuilder
 
 import org.junit.Test
 

@@ -16,7 +16,7 @@
         android:paddingTop="30dp"
         android:layout_centerHorizontal="true"
         android:paddingBottom="30dp"
-        android:text="PieBuilder"
+        android:text="Workout Builder"
         android:textSize="50dp" />
 
     <ImageView
@@ -24,7 +24,7 @@
         android:layout_width="392dp"
         android:layout_height="425dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/pie_main_page"
+        android:src="@drawable/main_page_icon"
         android:layout_below="@id/textView"
         />
 
@@ -33,22 +33,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:background="@color/yellow"
+        android:background="@color/orange"
         android:layout_centerHorizontal="true"
-        android:text="Get Your Pie"
-        android:textColor="@android:color/black"
+        android:text="Get your plan"
+        android:textColor="@android:color/white"
+        android:layout_alignParentLeft="true"
         android:layout_below="@id/imageView"/>
 
     <Button
         android:id="@+id/learn_more"
-        android:layout_width="wrap_content"
+        android:layout_width="149dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
-        android:background="@color/yellow"
-        android:layout_centerHorizontal="true"
+        android:background="@color/orange"
         android:text="Learn More"
-        android:textColor="@android:color/black"
-        android:layout_below="@id/enter"/>
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

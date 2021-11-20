@@ -36,6 +36,6 @@
         android:layout_below="@id/user_input"
         android:layout_centerHorizontal="true"
         android:text="Next"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
 </RelativeLayout>

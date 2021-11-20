@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="back"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/question_text_view2"
@@ -42,7 +42,7 @@
         android:layout_centerHorizontal="true"
         android:insetTop="8dp"
         android:text="Next"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:visibility="invisible" />
 
