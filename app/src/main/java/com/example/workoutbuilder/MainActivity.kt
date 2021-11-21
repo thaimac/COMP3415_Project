@@ -90,11 +90,9 @@ class MainActivity : AppCompatActivity() {
             arrayOf(  // for workout length
                 "30 minutes or less",
                 "1 hour",
-                "1.5 - 2 hours",
-                "3 hours",
-                "More than 3 hours"
+                "More than 1 hour"
             ),
-            arrayOf(  // for workout frequency
+            /*arrayOf(  // for workout frequency
                 "1 day per week",
                 "2 days per week",
                 "3 days per week",
@@ -102,20 +100,20 @@ class MainActivity : AppCompatActivity() {
                 "5 days per week",
                 "6 days per week",
                 "Every day"
-            ),
+            ),*/
             arrayOf(  // for fitness level now
                 "Do not work out much at all",
-                "Okay (work out once a month or so)",
-                "Average (work out once every few weeks)",
+                //"Okay (work out once a month or so)",
+                //"Average (work out once every few weeks)",
                 "Fairly fit (work out once every week, maybe with routines)",
                 "Very fit (work out often, have routines, etc.)"
             ),
             arrayOf(  // for build goal
                 "Endurance",
-                "Strength",
-                "Stamina"
+                "Hypertrophy",
+                "Strength"
             ),
-            arrayOf(  // for workout area
+            /*arrayOf(  // for workout area
                 "Core",
                 "Cardio",
                 "Flexibility",
@@ -130,7 +128,7 @@ class MainActivity : AppCompatActivity() {
             arrayOf(  // for in a gym vs at home
                 "In a gym (with machines)",
                 "At home (without machines)"
-            )
+            )*/
         )
 
         multiple_choice = findViewById(R.id.user_input_multiple_choice)
@@ -269,76 +267,82 @@ class MainActivity : AppCompatActivity() {
         var points = 0
 
         //points for age
-        if(user.age > 0 && user.age <= 30) {
-            points += 3
-        } else if(user.age > 30 && user.age <= 40) {
-            points += 2
-        } else if(user.age > 40 && user.age <= 50) {
-            points += 1
-        } else if(user.age > 50) {
+        if(user.age <12 || user.age > 65) {
             points += 0
-        }
-/*
-        //points for horizon
-        if(user.horizon == "15+ years") {
-            points += 4
-        } else if(user.horizon == "10-14 years") {
-            points += 3
-        } else if(user.horizon == "5-9 years") {
-            points += 2
-        } else if(user.horizon == "1-4 years") {
-            points += 1
-        } else if(user.horizon == "Less than 1 year") {
-            points -= 5
+        } else
+        {
+            points +=5
         }
 
-        //points for objective
-        if(user.objective == "Maximum asset growth") {
-            points += 4
-        } else if(user.objective == "Achieve better than average asset growth") {
-            points += 3
-        } else if(user.objective == "Achieve balanced growth with a moderate level of risk") {
-            points += 2
-        } else if(user.objective == "Have a steady stream of income") {
-            points += 1
-        } else if(user.objective == "Preserve capital") {
-            points += 0
-        }
 
-        //points for volatility
-        if(user.volatility == "Time to buy") {
-            points += 4
-        } else if(user.volatility == "I expect fluctuations") {
-            points += 3
-        } else if(user.volatility == "It's all good") {
-            points += 2
-        } else if(user.volatility == "It doesn't feel great, but I'm okay") {
-            points += 1
-        } else if(user.volatility == "That's it, I'm selling everything") {
-            points -= 3
-        }
-
-        //points for ideal portfolio
-        if(user.ideal_portfolio == "Maximize returns while accepting large account value fluctuation. Best case 17.2%. Average 10.05%. Worst case: -15.6%") {
+        //points for workout length
+        if(user.length == "30 minutes or less"){
+            points += 20
+        } else if(user.length== "1 hour") {
+            points += 10
+        } else if(user.length == "More than 1 hour") {
             points += 5
-        } else if(user.ideal_portfolio == "Seek greater returns while taking on more risk. Best case 12.1%. Average 7.47%. Worst case: -10.8%") {
-            points += 3
-        } else if(user.ideal_portfolio == "Seek medium returns while taking on some risk. Best case 7.8%. Average 6.19%. Worst case: -7%") {
-            points += 2
-        } else if(user.ideal_portfolio == "Keep risk low while seeking modest returns. Best case 5.6%. Average 3.86%. Worst case: -4.8%") {
-            points += 1
-        } else if(user.ideal_portfolio == "Avoid losses while accepting lower returns. Best case 3.7%. Average 2.26%. Worst case: -3%") {
-            points -= 2
         }
-*/
+
+
+        //points for fitness level
+        if(user.fitnessLevelNow == "Do not work out much at all") {
+            points += 1
+        } else if(user.fitnessLevelNow== "Fairly fit (work out once every week, maybe with routines)") {
+            points += 4
+        } else if(user.fitnessLevelNow == "Very fit (work out often, have routines, etc") {
+            points += 8
+        }
+
+        weightDiff= targetWeight-weight
+
+        //points for weightgoal
+        if(weightDiff >0) {
+            if(weightDiff>= 10)
+                points += 30
+            else
+                points += 15
+        } else if(weightDiff<0) {
+            if(weightDiff <= -10)
+                points -= 30
+            else
+                points -+15
+        } else {
+            points += 0
+        }
+
+        //points for build goal
+        if(user.buildGoal == "Endurance"){
+            if(points<30)
+                points += 0
+            else if(points <65)
+                points -= 30
+            else
+                points -= 60
+        } else if(user.buildGoal == "Hypertrophy"){
+            if(points < 30)
+                points += 30
+            else if(points <65)
+                points += 0
+            else
+                points -= 30
+        } else if(user.buildGoal == "Strength"){
+            if(points > 65)
+                points += 0
+            else if(points >= 30)
+                points += 30
+            else
+                points += 60
+        }
+
         //fit user into an investment profile based on the number of points
-        if(points >= 13) {
+        if(points > 65) {
             recommendation.setText(R.string.high_risk_profile)
             specific_holdings.setText(R.string.high_risk_holdings)
-        } else if(points < 13 && points >= 5) {
+        } else if(points >=30) {
             recommendation.setText(R.string.medium_risk_profile)
             specific_holdings.setText(R.string.medium_risk_holdings)
-        } else if(points < 5) {
+        } else {
             recommendation.setText(R.string.low_risk_profile)
             specific_holdings.setText(R.string.low_risk_holdings)
         }
