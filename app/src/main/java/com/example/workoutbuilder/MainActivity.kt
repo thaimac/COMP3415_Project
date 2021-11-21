@@ -92,15 +92,15 @@ class MainActivity : AppCompatActivity() {
                 "1 hour",
                 "More than 1 hour"
             ),
-            /*arrayOf(  // for workout frequency
-                "1 day per week",
-                "2 days per week",
-                "3 days per week",
+            arrayOf(  // for workout frequency
+                //"1 day per week",
+                //"2 days per week",
+                //"3 days per week",
                 "4 days per week",
-                "5 days per week",
+                //"5 days per week",
                 "6 days per week",
                 "Every day"
-            ),*/
+            ),
             arrayOf(  // for fitness level now
                 "Do not work out much at all",
                 //"Okay (work out once a month or so)",
@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
                 "Endurance",
                 "Hypertrophy",
                 "Strength"
-            ),
+            )
             /*arrayOf(  // for workout area
                 "Core",
                 "Cardio",
@@ -222,10 +222,10 @@ class MainActivity : AppCompatActivity() {
                                                                     length,
                                                                     frequency,
                                                                     fitnessLevelNow,
-                                                                    buildGoal,
-                                                                    workoutArea,
+                                                                    buildGoal
+                                                                    /*workoutArea,
                                                                     weights,
-                                                                    gym
+                                                                    gym*/
                                                                 )
 
                                                                 setContentView(R.layout.get_results)
@@ -274,7 +274,6 @@ class MainActivity : AppCompatActivity() {
             points +=5
         }
 
-
         //points for workout length
         if(user.length == "30 minutes or less"){
             points += 20
@@ -284,6 +283,14 @@ class MainActivity : AppCompatActivity() {
             points += 5
         }
 
+        //points for workout frequency
+        if(user.frequency =="4 days per week") {
+            points += 8
+        } else if(user.frequency=="6 days per week"){
+            points += 4
+        } else if(user.frequency =="Every day"){
+            points += 2
+        }
 
         //points for fitness level
         if(user.fitnessLevelNow == "Do not work out much at all") {
@@ -334,6 +341,21 @@ class MainActivity : AppCompatActivity() {
             else
                 points += 60
         }
+
+        /* // workout area
+        if(user.workoutArea=="Core"){
+            //recommend core workout
+        } else if(user.workoutArea=="Cardio"){
+            //recommend cardio workout
+        }else if(user.workoutArea=="Flexibility"){
+            //recommend flexibility workout
+        }else if(user.workoutArea=="Lower Body"){
+            //recommend lower body workout
+        }else if(user.workoutArea=="Upper Body"){
+            //recommend upper body workout
+        }else if(user.workoutArea=="Full Body"){
+            //recommend full body workout
+        }*/
 
         //fit user into an investment profile based on the number of points
         if(points > 65) {
