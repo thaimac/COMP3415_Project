@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/background">>
+    android:background="@color/background">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,34 +23,32 @@
         android:paddingBottom="10dp"
         android:text="General Recommendation:"
         android:textColor="#EFE8E8"
-        android:textSize="30dp"></TextView>
+        android:textSize="30dp"/>
 
     <TextView
         android:id="@+id/asset_alloc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/overview"
-        android:textSize="20dp"></TextView>
+        android:textSize="20dp"/>
 
     <TextView
         android:id="@+id/specifics_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/asset_alloc"
-        android:layout_marginTop="47dp"
         android:background="#B5003D"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:text="Specific holdings that suit your situation"
+        android:text="Your Personalized Plan:"
         android:textColor="#F1EEEE"
-        android:textSize="20dp"></TextView>
+        android:textSize="20dp"/>
 
     <TextView
         android:id="@+id/specific_holdings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/specifics_text"
-        android:textColor="#FAF6F6"
-        android:textSize="16dp"></TextView>
+        android:textSize="16dp"/>
 </RelativeLayout>
 </ScrollView>

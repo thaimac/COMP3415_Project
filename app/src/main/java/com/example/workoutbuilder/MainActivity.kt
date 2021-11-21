@@ -262,10 +262,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.show_results)
         recommendation = findViewById(R.id.asset_alloc)
         specific_holdings = findViewById(R.id.specific_holdings)
-        getInvestmentProfile(user)
+        assignProfile(user)
     }
 
-    private fun getInvestmentProfile(user: User) {
+    private fun assignProfile(user: User) {
         var points = 0
 
         //points for age
