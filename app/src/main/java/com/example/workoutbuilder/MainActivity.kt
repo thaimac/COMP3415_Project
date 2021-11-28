@@ -1,14 +1,11 @@
 package com.example.workoutbuilder
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import org.w3c.dom.Text
 
 private const val TAG = "MainActivity"
 private const val KEY_INDEX = "index"
@@ -23,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var questionViewMultChoice: TextView
     private lateinit var show_results: Button
     private lateinit var recommendation: TextView
-    private lateinit var specific_holdings: TextView
+    private lateinit var workout_plan: TextView
 
     //Function variable set
     private var i = 0
@@ -95,11 +92,11 @@ class MainActivity : AppCompatActivity() {
             arrayOf(  // for workout frequency
                 //"1 day per week",
                 //"2 days per week",
-                //"3 days per week",
+                "3 days per week",
                 "4 days per week",
                 //"5 days per week",
-                "6 days per week",
-                "Every day"
+                "6 days per week"
+                //"Every day"
             ),
             arrayOf(  // for fitness level now
                 "Do not work out much at all",
@@ -175,7 +172,7 @@ class MainActivity : AppCompatActivity() {
                                     this,
                                     android.R.layout.simple_list_item_activated_1,
                                     multChoice[3]
-                                )
+                                )/*
                                 multiple_choice.adapter = adapter
                                 multiple_choice.onItemClickListener =
                                     AdapterView.OnItemClickListener { parent, view, position, id ->
@@ -208,7 +205,7 @@ class MainActivity : AppCompatActivity() {
                                                             this,
                                                             android.R.layout.simple_list_item_activated_1,
                                                             multChoice[6]
-                                                        )
+                                                        )*/
                                                         multiple_choice.adapter = adapter
                                                         multiple_choice.onItemClickListener =
                                                             AdapterView.OnItemClickListener { parent, view, position, id ->
@@ -236,9 +233,9 @@ class MainActivity : AppCompatActivity() {
                                                                 }
                                                             }
                                                     }
-                                            }
-                                    }
-                            }
+                                            //}
+                                   // }
+                            //}
                     }
             }
     }
@@ -258,8 +255,8 @@ class MainActivity : AppCompatActivity() {
     //function to recommend a portfolio to the user
     private fun showResults(user: User) {
         setContentView(R.layout.show_results)
-        recommendation = findViewById(R.id.asset_alloc)
-        specific_holdings = findViewById(R.id.specific_holdings)
+        recommendation = findViewById(R.id.routine_overview)
+        workout_plan = findViewById(R.id.workout_plan)
         assignProfile(user)
     }
 
@@ -359,14 +356,14 @@ class MainActivity : AppCompatActivity() {
 
         //fit user into an investment profile based on the number of points
         if(points > 65) {
-            recommendation.setText(R.string.high_risk_profile)
-            specific_holdings.setText(R.string.high_risk_holdings)
+            recommendation.setText(R.string.six_day_profile)
+            workout_plan.setText(R.string.six_day_plan)
         } else if(points >=30) {
-            recommendation.setText(R.string.medium_risk_profile)
-            specific_holdings.setText(R.string.medium_risk_holdings)
+            recommendation.setText(R.string.four_day_profile)
+            workout_plan.setText(R.string.four_day_plan)
         } else {
-            recommendation.setText(R.string.low_risk_profile)
-            specific_holdings.setText(R.string.low_risk_holdings)
+            recommendation.setText(R.string.three_day_profile)
+            workout_plan.setText(R.string.three_day_plan)
         }
     }
 }

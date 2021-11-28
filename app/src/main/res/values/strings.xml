@@ -25,10 +25,10 @@
     <string name="question_gym">Are you working out in a gym (with machines) or at home (without machines)?</string>
 
 
-    <string name="low_risk_profile">Your answers indicate that, although you aspire to build muscle and strength, you are
+    <string name="three_day_profile">Your answers indicate that, although you aspire to build muscle and strength, you are
     limited in the amount of time you can devote to exercise. As such, we believe that the following workout plan
     is best suited for your current situation</string>
-    <string name="low_risk_holdings"><b>Full body split - 3 days a week</b>\n\n
+    <string name="three_day_plan"><b>Full body split - 3 days a week</b>\n\n
                                     <b>Workout 1:</b>\n\n
                                     Bench Press\n
                                     Pull ups\n
@@ -51,9 +51,9 @@
                                     Dumbbell Rear Delt Fly\n
                                     Hammer Curls\n
                                     Skullcrushers\n</string>
-    <string name="medium_risk_profile">Your answers indicate that, although you are able to spend more time in the gym than some,
+    <string name="four_day_profile">Your answers indicate that, although you are able to spend more time in the gym than some,
     your time is still limited to some degree. As such, the plan we believe would best fit your lifestyle is as follows:</string>
-    <string name="medium_risk_holdings"><b>Upper/Lower Split - 4 days a week</b>\n\n
+    <string name="four_day_plan"><b>Upper/Lower Split - 4 days a week</b>\n\n
                                         <b>Upper 1</b>\n\n
                                         Bench Press\n
                                         Bent Over Row\n
@@ -79,10 +79,10 @@
         `                               Bulgarian Split Squats\n
                                         Calf Raises\n
                                         Barbell Walking Lunges</string>
-    <string name="high_risk_profile">Your answers indicate that you hope to gain as much strength and muscle as possible and that time is no issue.
+    <string name="six_day_profile">Your answers indicate that you hope to gain as much strength and muscle as possible and that time is no issue.
     Given this, we believe that the following program will fit your lifestyle the best. It will have you in the gym 6 days a
     week with each muscle group being hit twice per week.</string>
-    <string name="high_risk_holdings"><b>Chest/Tri\'s, Back/Bi\'s, Shoulders/Legs x2 per week</b>\n\n
+    <string name="six_day_plan"><b>Chest/Tri\'s, Back/Bi\'s, Shoulders/Legs x2 per week</b>\n\n
                                       <b>Chest and Triceps 1</b>
                                       Bench Press\n
                                       Cable Crossovers\n
