@@ -14,6 +14,25 @@
     information on a myriad of topics related to health and fitness. Click a button of interest below to learn more about
     the topic!</string>
 
+    <string name="comp_iso_intro">Compound vs. Isolation Movements</string>
+    <string name="comp_iso_desc"><b>Compound Movements</b> recruit a wide variety of muscle groups, stabilizer muscles,
+    and tend to be much more taxing on the body and central nervous system. As such, it is best to perform these types of
+    movements at the beginning of every workout, since this is when the body is able to provide the highest amount of output.
+    Examples of compound movements are as follows:\n\n
+        - Bench Press\n
+        - Squats\n
+        - Deadlifts\n
+        - Pull ups\n
+    <b>Isolation Movements</b> differ from compound movements in that they typically target one muscle group, are normally
+    done for higher reps, and don\'t require as much output, making them much less taxing on the body and central nervous system.
+    It it best to place these types of movements at the end of your workout since this is the point where you are running
+    out of energy, but are still able to squeeze out a few more reps. Examples of isolation movements are as follows:\n
+        - Bicep curl\n
+        - Lateral Raise\n
+        - Skullcrushers\n
+        - Chest Flys\n
+    </string>
+
     <string name="question_age">How old are you?</string>
     <string name="question_height">What is your height (in cm)?</string>
     <string name="question_weight">What is your weight (in kg)?</string>

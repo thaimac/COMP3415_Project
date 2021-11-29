@@ -55,12 +55,60 @@
             android:layout_marginStart="36dp"
             android:layout_marginLeft="36dp"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="180dp"
+            android:layout_marginBottom="18dp"
             android:gravity="center_horizontal"
             android:text="@string/k_base_intro"
             android:textSize="18dp" />
 
+        <Button
+            android:id="@+id/sets_reps_rest"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/knowledge_base_intro"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/black"
+            android:text="Sets/Reps/Rest"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#3A3C3C" />
 
+        <Button
+            android:id="@+id/comp_iso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sets_reps_rest"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/black"
+            android:text="Isolation vs Compound"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#3A3C3C"
+            android:onClick="comp_iso_header"/>
+
+        <TextView
+            android:id="@+id/comp_iso_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comp_iso"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/comp_iso_intro"
+            android:textSize="25dp">
+        </TextView>
+        <TextView
+            android:id="@+id/comp_iso_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comp_iso_header"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/comp_iso_desc"
+            android:textSize="25dp">
+        </TextView>
 
     </RelativeLayout>
 </ScrollView>
