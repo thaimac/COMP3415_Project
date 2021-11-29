@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:background="#3A3C3C">
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,12 +12,13 @@
         android:orientation="horizontal"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        tools:context=".LearnMore">
+        tools:context=".KnowledgeBase">
 
         <Button
             android:id="@+id/back"
             android:layout_width="87dp"
             android:layout_height="47dp"
+            android:layout_marginTop="10dp"
             android:text="Back"
             android:textColor="@color/white"
             app:backgroundTint="#050505"></Button>
@@ -27,12 +27,12 @@
             android:id="@+id/header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/back"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="128dp"
             android:layout_marginLeft="128dp"
-            android:text="About Us"
-            android:textColor="#B5003D"
+            android:layout_marginTop="50dp"
+            android:text="Knowledge Base"
+            android:textColor="@color/black"
             android:textSize="32dp" > </TextView>
 
         <ImageView
@@ -43,22 +43,24 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="44dp"
             android:layout_marginLeft="44dp"
-            android:layout_marginTop="-1dp"
-            android:src="@drawable/about_us" />
+            android:layout_marginTop="15dp"
+            android:src="@drawable/knowledge_base_icon1" />
 
         <TextView
-            android:id="@+id/about"
+            android:id="@+id/knowledge_base_intro"
+            android:layout_below="@id/imageView3"
             android:layout_width="335dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="36dp"
             android:layout_marginLeft="36dp"
-            android:layout_marginTop="324dp"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="180dp"
             android:gravity="center_horizontal"
-            android:text="@string/about"
-            android:textColor="#FDF6F6"
+            android:text="@string/k_base_intro"
             android:textSize="18dp" />
+
+
 
     </RelativeLayout>
 </ScrollView>

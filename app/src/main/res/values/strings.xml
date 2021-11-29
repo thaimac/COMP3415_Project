@@ -10,6 +10,9 @@
         our ability to provide you with the personalized roadmap to get there.
     </string>
 
+    <string name="k_base_intro">Welcome to the Knowledge Base! It is here where you can extract a wide variety of valuable
+    information on a myriad of topics related to health and fitness. Click a button of interest below to learn more about
+    the topic!</string>
 
     <string name="question_age">How old are you?</string>
     <string name="question_height">What is your height (in cm)?</string>

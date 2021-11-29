@@ -11,6 +11,7 @@ class LandingPage : AppCompatActivity() {
 
     private lateinit var learnMore: Button
     private lateinit var enterApp: Button
+    private lateinit var knowledgeBase: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +19,7 @@ class LandingPage : AppCompatActivity() {
 
         learnMore = findViewById(R.id.learn_more)
         enterApp = findViewById(R.id.enter)
+        knowledgeBase = findViewById(R.id.knowledge_base)
 
         learnMore.setOnClickListener { view: View ->
             val intent = Intent(this, LearnMore::class.java)
@@ -25,6 +27,11 @@ class LandingPage : AppCompatActivity() {
         }
         enterApp.setOnClickListener { view: View ->
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        knowledgeBase.setOnClickListener { view: View ->
+            val intent = Intent(this, KnowledgeBase::class.java)
             startActivity(intent)
         }
     }
