@@ -209,7 +209,7 @@ class MainActivity : AppCompatActivity() {
                                                         multiple_choice.adapter = adapter
                                                         multiple_choice.onItemClickListener =
                                                             AdapterView.OnItemClickListener { parent, view, position, id ->
-                                                                gym = parent.getItemAtPosition(position).toString()
+                                                                //gym = parent.getItemAtPosition(position).toString()
                                                                 //create User instance with the user's answers
                                                                 val user = User(
                                                                     age,

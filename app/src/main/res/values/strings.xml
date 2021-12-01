@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Workout Builder</string>
+
+    <!--Learn More page -->
     <string name="about">Have you ever considered starting an exercise routine but then became overwhelmed by the sheer amount of information out there on the topic? We feel you, and that\'s why we decided to develop a solution
     designed to strip all the clutter and conflicting information out there and provide you with a personalized program based on your current situation and future goals. Our process is simple, and consists of the following three steps:\n\n
         <b>1. Goal Discovery</b>\n
@@ -10,6 +12,7 @@
         our ability to provide you with the personalized roadmap to get there.
     </string>
 
+    <!--Knowledge Base page -->
     <string name="k_base_intro">Welcome to the Knowledge Base! It is here where you can extract a wide variety of valuable
     information on a myriad of topics related to health and fitness. Click a button of interest below to learn more about
     the topic!</string>
