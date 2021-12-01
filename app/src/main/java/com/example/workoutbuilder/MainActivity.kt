@@ -252,7 +252,7 @@ class MainActivity : AppCompatActivity() {
         questionTextView.setText(questionTextResId)
     }
 
-    //function to recommend a portfolio to the user
+    //function to provide the user with their personalized workout plan
     private fun showResults(user: User) {
         setContentView(R.layout.show_results)
         recommendation = findViewById(R.id.routine_overview)
@@ -354,7 +354,7 @@ class MainActivity : AppCompatActivity() {
             //recommend full body workout
         }*/
 
-        //fit user into an investment profile based on the number of points
+        //fit user into an personality profile based on the number of points
         if(points > 65) {
             recommendation.setText(R.string.six_day_profile)
             workout_plan.setText(R.string.six_day_plan)

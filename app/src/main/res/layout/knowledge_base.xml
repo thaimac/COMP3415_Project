@@ -86,29 +86,6 @@
             android:background="@color/black"
             android:text="Isolation vs Compound"
             android:textColor="#FFFFFF"
-            app:backgroundTint="#3A3C3C"
-            android:onClick="comp_iso_header"/>
-
-        <TextView
-            android:id="@+id/comp_iso_header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/comp_iso"
-            android:layout_centerHorizontal="true"
-            android:gravity="center_horizontal"
-            android:text="@string/comp_iso_intro"
-            android:textSize="25dp">
-        </TextView>
-        <TextView
-            android:id="@+id/comp_iso_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/comp_iso_header"
-            android:layout_centerHorizontal="true"
-            android:gravity="center_horizontal"
-            android:text="@string/comp_iso_desc"
-            android:textSize="25dp">
-        </TextView>
-
+            app:backgroundTint="#3A3C3C" />
     </RelativeLayout>
 </ScrollView>

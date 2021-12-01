@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".SetsRepsRest"
+    android:background="@color/white">
+    <Button
+        android:id="@+id/back"
+        android:layout_width="87dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="10dp"
+        android:text="Back"
+        android:textColor="@color/white"
+        app:backgroundTint="#050505"></Button>
+    <TextView
+        android:id="@+id/sets_reps_rest_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/sets_reps_rest"
+        android:textSize="25dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/sets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sets_reps_rest_header"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/sets"
+        android:textSize="25dp">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/sets_image"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_below="@id/sets_reps_rest_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/sets" />
+
+    <TextView
+        android:id="@+id/sets_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sets_image"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/sets_info"
+        android:textSize="18dp"></TextView>
+    <TextView
+        android:id="@+id/reps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sets_info"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/reps"
+        android:textSize="25dp">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/reps_image"
+        android:layout_width="125dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/reps"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/reps" />
+
+    <TextView
+        android:id="@+id/reps_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reps_image"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/reps_info"
+        android:textSize="18dp">
+    </TextView>
+    <TextView
+        android:id="@+id/rest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reps_info"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/rest"
+        android:textSize="25dp">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/rest_image"
+        android:layout_width="256dp"
+        android:layout_height="78dp"
+        android:layout_below="@id/rest"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/rest" />
+
+    <TextView
+        android:id="@+id/rest_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rest_image"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/rest_info"
+        android:textSize="18dp">
+    </TextView>
+</RelativeLayout>
+</ScrollView>
