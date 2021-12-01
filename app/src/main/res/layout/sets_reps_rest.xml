@@ -34,6 +34,12 @@
         android:textSize="25dp">
     </TextView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/sets_reps_rest_header"
+        android:background="#c0c0c0"/>
+
     <TextView
         android:id="@+id/sets"
         android:layout_width="match_parent"
@@ -65,6 +71,13 @@
         android:gravity="center_horizontal"
         android:text="@string/sets_info"
         android:textSize="18dp"></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/sets_info"
+        android:background="#c0c0c0"/>
+
     <TextView
         android:id="@+id/reps"
         android:layout_width="match_parent"
@@ -97,6 +110,13 @@
         android:text="@string/reps_info"
         android:textSize="18dp">
     </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/reps_info"
+        android:background="#c0c0c0"/>
+
     <TextView
         android:id="@+id/rest"
         android:layout_width="match_parent"
