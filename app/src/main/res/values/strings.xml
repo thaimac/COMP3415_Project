@@ -56,24 +56,24 @@
     rest very minimally, with the optimal period being anywhere from 0-1 min.</string>
 
     <!-- Helpful Tips Page -->
-    <string name="helpfulTipsText1">Here are some different activities and tips that can help users
-        get the most out of their workouts.
+    <string name="helpfulTipsText1">Here are some different activities and tips that can help you
+        get the most out of your workouts.
     </string>
     <string name="tip1">1. Listen to Music</string>
     <string name="tip1Text">Listening to music while working out can help you get motivated and can
         put you in a better mood. Music can help you psychologically which can help boost performance
         while working out as your body may have a tendency to move to the beat. As such, listening to
-        fast paced music can help improve overall physical performance while also increasing
+        fast-paced music can help improve overall physical performance while also increasing
         motivation.
     </string>
     <string name="tip2">2. Drink Lots of Water</string>
     <string name="tip2Text">While this may seem obvious, workouts cause you to sweat which in turn
-        decreases the amount of fluid in your body. As such, overtime the workout may feel more
-        difficult and strenuous. Drinking lots of water while working out can help improve overall
-        performance by preventing possible dehydration.
+        decreases the amount of fluid in your body. As such, the workout may feel more
+        difficult and strenuous overtime. Drinking lots of water while working out can help improve
+        overall performance by preventing possible dehydration.
     </string>
     <string name="tip3">3. Warm Up Before Working Out</string>
-    <string name="tip3Text">Doing a warm up for 5-10 minutes before starting you work out can help
+    <string name="tip3Text">Doing a warm up for 5-10 minutes before starting your work out can help
         to improve your workout experience by preventing any possible injuries that may occur from
         strenuous exercise.
     </string>
