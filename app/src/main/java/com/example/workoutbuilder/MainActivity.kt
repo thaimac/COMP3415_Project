@@ -273,29 +273,29 @@ class MainActivity : AppCompatActivity() {
 
         //points for workout length
         if(user.length == "30 minutes or less"){
-            points += 20
+            points += 4
         } else if(user.length== "1 hour") {
-            points += 10
+            points += 8
         } else if(user.length == "More than 1 hour") {
-            points += 5
+            points += 12
         }
 
         //points for workout frequency
-        if(user.frequency =="4 days per week") {
-            points += 8
-        } else if(user.frequency=="6 days per week"){
-            points += 4
-        } else if(user.frequency =="Every day"){
-            points += 2
+        if(user.frequency =="3 days per week") {
+            points += 3
+        } else if(user.frequency=="4 days per week"){
+            points += 20
+        } else if(user.frequency =="6 days per week"){
+            points += 50
         }
 
         //points for fitness level
         if(user.fitnessLevelNow == "Do not work out much at all") {
-            points += 1
+            points += 2
         } else if(user.fitnessLevelNow== "Fairly fit (work out once every week, maybe with routines)") {
             points += 4
         } else if(user.fitnessLevelNow == "Very fit (work out often, have routines, etc") {
-            points += 8
+            points += 6
         }
 
         weightDiff= targetWeight-weight
@@ -303,40 +303,36 @@ class MainActivity : AppCompatActivity() {
         //points for weightgoal
         if(weightDiff >0) {
             if(weightDiff>= 10)
-                points += 30
+                points += 4
             else
-                points += 15
+                points += 2
         } else if(weightDiff<0) {
             if(weightDiff <= -10)
-                points -= 30
+                points +=0
             else
-                points -+15
+                points +=2
         } else {
-            points += 0
+            points += 2
         }
 
         //points for build goal
-        if(user.buildGoal == "Endurance"){
-            if(points<30)
-                points += 0
-            else if(points <65)
-                points -= 30
-            else
-                points -= 60
-        } else if(user.buildGoal == "Hypertrophy"){
-            if(points < 30)
-                points += 30
-            else if(points <65)
-                points += 0
-            else
-                points -= 30
-        } else if(user.buildGoal == "Strength"){
-            if(points > 65)
-                points += 0
-            else if(points >= 30)
-                points += 30
-            else
-                points += 60
+        if(user.buildGoal == "Strength")
+        {
+            if(points<=30) {
+                //incorporate strength workouts
+            }
+        }
+        else if(user.buildGoal == "Hypertrophy")
+        {
+            if(points in 31..65) {
+                //incorporate hypertrophy workouts
+            }
+        }
+        else if(user.buildGoal == "Endurance")
+        {
+            if(points > 65){
+                //incorporate endurance workouts
+            }
         }
 
         /* // workout area
