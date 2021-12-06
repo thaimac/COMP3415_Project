@@ -48,7 +48,7 @@
             android:layout_marginBottom="18dp"
             android:gravity="center_horizontal"
             android:text="@string/helpfulTipsText1"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tipsView2"
@@ -61,7 +61,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="18dp"
             android:text="@string/tip1"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tipsView3"
@@ -71,7 +71,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="36dp"
             android:layout_marginLeft="36dp"
-            android:layout_marginTop="1dp"
             android:layout_marginBottom="18dp"
             android:gravity="center_horizontal"
             android:text="@string/tip1Text"
@@ -88,7 +87,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="18dp"
             android:text="@string/tip2"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tipsView5"
@@ -98,7 +97,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="36dp"
             android:layout_marginLeft="36dp"
-            android:layout_marginTop="1dp"
             android:layout_marginBottom="18dp"
             android:gravity="center_horizontal"
             android:text="@string/tip2Text"
@@ -115,7 +113,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="18dp"
             android:text="@string/tip3"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tipsView7"
@@ -125,7 +123,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="36dp"
             android:layout_marginLeft="36dp"
-            android:layout_marginTop="1dp"
             android:layout_marginBottom="18dp"
             android:gravity="center_horizontal"
             android:text="@string/tip3Text"
