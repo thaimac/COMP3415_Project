@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:context=".HelpfulTips">
+
+        <Button
+            android:id="@+id/backTipsBtn"
+            android:layout_width="87dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="10dp"
+            android:text="Back"
+            android:textColor="@color/white"
+            app:backgroundTint="#050505"
+            tools:ignore="TouchTargetSizeCheck" > </Button>
+
+        <TextView
+            android:id="@+id/headerTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="128dp"
+            android:layout_marginLeft="128dp"
+            android:layout_marginTop="50dp"
+            android:text="Helpful Tips"
+            android:textColor="@color/black"
+            android:textSize="32dp" > </TextView>
+
+        <TextView
+            android:id="@+id/tipsView"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerTips"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="18dp"
+            android:gravity="center_horizontal"
+            android:text="@string/helpfulTipsText1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tipsView2"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tipsView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="18dp"
+            android:text="@string/tip1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tipsView3"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tipsView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="18dp"
+            android:gravity="center_horizontal"
+            android:text="@string/tip1Text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tipsView4"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tipsView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="18dp"
+            android:text="@string/tip2"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tipsView5"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tipsView4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="18dp"
+            android:gravity="center_horizontal"
+            android:text="@string/tip2Text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tipsView6"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tipsView5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="18dp"
+            android:text="@string/tip3"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tipsView7"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tipsView6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="18dp"
+            android:gravity="center_horizontal"
+            android:text="@string/tip3Text"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</ScrollView>

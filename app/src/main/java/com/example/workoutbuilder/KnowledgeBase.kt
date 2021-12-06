@@ -12,6 +12,7 @@ class KnowledgeBase : AppCompatActivity() {
     private lateinit var back: Button
     private lateinit var compIso: Button
     private lateinit var setsRepsRest: Button
+    private lateinit var tipsBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,7 @@ class KnowledgeBase : AppCompatActivity() {
         back = findViewById(R.id.back)
         compIso = findViewById(R.id.comp_iso)
         setsRepsRest = findViewById(R.id.sets_reps_rest)
+        tipsBtn = findViewById(R.id.helpfulTipsBtn)
 
         back.setOnClickListener { view: View ->
             val intent = Intent(this, LandingPage::class.java)
@@ -33,6 +35,11 @@ class KnowledgeBase : AppCompatActivity() {
 
         setsRepsRest.setOnClickListener{ view: View ->
             val intent = Intent(this, SetsRepsRest::class.java)
+            startActivity(intent)
+        }
+
+        tipsBtn.setOnClickListener{ view: View ->
+            val intent = Intent(this, HelpfulTips::class.java)
             startActivity(intent)
         }
     }
