@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
 
+//Author: Tyler McEwen
+//Purpose: To render the xml for the knowledge base section of the app and listen for any button clicks
 class KnowledgeBase : AppCompatActivity() {
 
     private lateinit var back: Button

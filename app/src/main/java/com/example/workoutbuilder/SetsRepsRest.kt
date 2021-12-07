@@ -6,6 +6,9 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+//Author: Tyler McEwen
+//Purpose: To render the xml that gets instantiated on the click of the Sets/Reps/Rest button in the knowledge base
+
 class SetsRepsRest : AppCompatActivity() {
 
     private lateinit var back: Button

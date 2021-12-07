@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+//Author: Tyler McEwen
+//Purpose: To render the xml for the Learn More section of the app and listen for clicks on the back button
 class LearnMore : AppCompatActivity() {
 
     private lateinit var back: Button

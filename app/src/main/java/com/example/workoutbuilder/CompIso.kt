@@ -6,6 +6,9 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+//Author: Tyler McEwen
+//Purpose: To give functionality to the compound vs isolation movements button and link its corresponding xml
+
 class CompIso : AppCompatActivity() {
 
     private lateinit var back: Button
