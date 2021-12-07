@@ -94,7 +94,7 @@
     <string name="question_gym">Are you working out in a gym (with machines) or at home (without machines)?</string>
 
 
-    <string name="three_day_profile">Your answers indicate that, although you aspire to build muscle and strength, you are
+    <string name="three_day_profile">Your answers indicate that, although you have goals in mind, you are
     limited in the amount of time you can devote to exercise. As such, we believe that the following workout plan
     is best suited for your current situation</string>
     <string name="three_day_plan"><b>Full body split - 3 days a week</b>\n\n
@@ -148,7 +148,7 @@
         `                               Bulgarian Split Squats\n
                                         Calf Raises\n
                                         Barbell Walking Lunges</string>
-    <string name="six_day_profile">Your answers indicate that you hope to gain as much strength and muscle as possible and that time is no issue.
+    <string name="six_day_profile">Your answers indicate that you hope to reach your goals as quickly as possible and that time is no issue.
     Given this, we believe that the following program will fit your lifestyle the best. It will have you in the gym 6 days a
     week with each muscle group being hit twice per week.</string>
     <string name="six_day_plan"><b>Chest/Tri\'s, Back/Bi\'s, Shoulders/Legs x2 per week</b>\n\n
