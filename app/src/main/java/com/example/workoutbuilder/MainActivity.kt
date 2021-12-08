@@ -284,9 +284,9 @@ class MainActivity : AppCompatActivity() {
         if(user.frequency =="3 days per week") {
             points += 3
         } else if(user.frequency=="4 days per week"){
-            points += 20
+            points += 30
         } else if(user.frequency =="6 days per week"){
-            points += 50
+            points += 70
         }
 
         //points for fitness level
@@ -318,21 +318,16 @@ class MainActivity : AppCompatActivity() {
         //points for build goal
         if(user.buildGoal == "Strength")
         {
-            if(points<=30) {
-                //incorporate strength workouts
-            }
+            points+=2
         }
         else if(user.buildGoal == "Hypertrophy")
         {
-            if(points in 31..65) {
-                //incorporate hypertrophy workouts
-            }
+            points+=4
         }
         else if(user.buildGoal == "Endurance")
         {
-            if(points > 65){
-                //incorporate endurance workouts
-            }
+            points+=6
+
         }
 
         /* // workout area
