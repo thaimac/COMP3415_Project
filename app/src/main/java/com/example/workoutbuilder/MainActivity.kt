@@ -10,6 +10,9 @@ import androidx.lifecycle.ViewModelProviders
 private const val TAG = "MainActivity"
 private const val KEY_INDEX = "index"
 
+// Authors: all of us
+// Lauryn and Tyler: set up all of the questions
+
 class MainActivity : AppCompatActivity() {
     //XML variable set
     private lateinit var questionTextView: TextView
