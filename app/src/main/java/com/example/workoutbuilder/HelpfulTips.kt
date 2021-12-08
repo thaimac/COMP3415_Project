@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
 
+// Author: Lauryn Gowanlock
+// Purpose: To render xml file for helpful tips page and set up the back button
 class HelpfulTips : AppCompatActivity() {
 
     private lateinit var backBtn: Button
