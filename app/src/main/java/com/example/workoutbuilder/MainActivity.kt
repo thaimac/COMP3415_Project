@@ -297,10 +297,10 @@ class MainActivity : AppCompatActivity() {
         } else if(user.fitnessLevelNow == "Very fit (work out often, have routines, etc") {
             points += 6
         }
-
+        //finding the weight goal
         weightDiff= targetWeight-weight
 
-        //points for weightgoal
+        //points for weight goal
         if(weightDiff >0) {
             if(weightDiff>= 10)
                 points += 4
