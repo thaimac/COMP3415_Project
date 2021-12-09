@@ -13,7 +13,8 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     tools:context=".SetsRepsRest"
-    android:background="@color/white">
+    android:background="#3A3C3C">
+
     <Button
         android:id="@+id/back"
         android:layout_width="87dp"
@@ -22,17 +23,18 @@
         android:text="Back"
         android:textColor="@color/white"
         app:backgroundTint="#050505"></Button>
+
     <TextView
         android:id="@+id/sets_reps_rest_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/back"
-        android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
         android:gravity="center_horizontal"
         android:text="@string/sets_reps_rest"
-        android:textSize="25dp">
-    </TextView>
+        android:textColor="#B5003D"
+        android:textSize="25dp"></TextView>
 
     <View
         android:layout_width="match_parent"
@@ -48,8 +50,8 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:text="@string/sets"
-        android:textSize="25dp">
-    </TextView>
+        android:textColor="@color/black"
+        android:textSize="25dp"></TextView>
 
     <ImageView
         android:id="@+id/sets_image"
@@ -70,6 +72,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:text="@string/sets_info"
+        android:textColor="@color/white"
         android:textSize="18dp"></TextView>
 
     <View
@@ -86,8 +89,8 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:text="@string/reps"
-        android:textSize="25dp">
-    </TextView>
+        android:textSize="25dp"
+        android:textColor="@color/black"></TextView>
 
     <ImageView
         android:id="@+id/reps_image"
@@ -108,8 +111,8 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:text="@string/reps_info"
-        android:textSize="18dp">
-    </TextView>
+        android:textColor="#F6F2F2"
+        android:textSize="18dp"></TextView>
 
     <View
         android:layout_width="match_parent"
@@ -125,6 +128,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:text="@string/rest"
+        android:textColor="@color/black"
         android:textSize="25dp">
     </TextView>
 
@@ -147,6 +151,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:text="@string/rest_info"
+        android:textColor="@color/white"
         android:textSize="18dp">
     </TextView>
 </RelativeLayout>

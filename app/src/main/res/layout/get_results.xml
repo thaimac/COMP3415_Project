@@ -8,16 +8,18 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     tools:context=".MainActivity"
-    android:background="@color/background">>
+    android:background="#3A3C3C">>
 
     <Button
         android:id="@+id/show_results"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_centerInParent="true"
+        android:background="@drawable/nextbtn"
         android:text="Get results"
-        android:textColor="@color/white"
-        app:backgroundTint="#3A3C3C" />
+        android:textColor="#B5003D"
+        android:textSize="30sp"
+        app:backgroundTint="@color/black" />
 
 
 </RelativeLayout>

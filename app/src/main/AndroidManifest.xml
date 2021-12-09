@@ -26,6 +26,10 @@
         <activity android:name=".CompIso"></activity>
         <activity android:name=".SetsRepsRest"></activity>
         <activity android:name=".HelpfulTips"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

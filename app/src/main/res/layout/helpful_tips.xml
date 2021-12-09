@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#3A3C3C">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,9 +33,9 @@
             android:layout_marginStart="128dp"
             android:layout_marginLeft="128dp"
             android:layout_marginTop="50dp"
-            android:text="Helpful Tips"
-            android:textColor="@color/black"
-            android:textSize="32dp" > </TextView>
+            android:text="HELPFUL TIPS"
+            android:textColor="#B5003D"
+            android:textSize="32dp"></TextView>
 
         <TextView
             android:id="@+id/tipsView"
@@ -48,6 +49,7 @@
             android:layout_marginBottom="18dp"
             android:gravity="center_horizontal"
             android:text="@string/helpfulTipsText1"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -61,6 +63,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="18dp"
             android:text="@string/tip1"
+            android:textColor="#B5003D"
             android:textSize="20sp" />
 
         <TextView
@@ -74,6 +77,7 @@
             android:layout_marginBottom="18dp"
             android:gravity="center_horizontal"
             android:text="@string/tip1Text"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
@@ -87,6 +91,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="18dp"
             android:text="@string/tip2"
+            android:textColor="#B5003D"
             android:textSize="20sp" />
 
         <TextView
@@ -100,6 +105,7 @@
             android:layout_marginBottom="18dp"
             android:gravity="center_horizontal"
             android:text="@string/tip2Text"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
@@ -113,6 +119,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="18dp"
             android:text="@string/tip3"
+            android:textColor="#B5003D"
             android:textSize="20sp" />
 
         <TextView
@@ -126,6 +133,7 @@
             android:layout_marginBottom="18dp"
             android:gravity="center_horizontal"
             android:text="@string/tip3Text"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
     </RelativeLayout>

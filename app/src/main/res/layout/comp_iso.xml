@@ -4,18 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#3a3c3c">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context=".CompIso"
-    android:background="@color/white">
+    tools:context=".CompIso">
 
     <Button
         android:id="@+id/back"
@@ -30,22 +28,24 @@
         android:id="@+id/comp_iso_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/back"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:layout_below="@+id/back"
         android:gravity="center_horizontal"
         android:text="@string/comp_iso_intro"
-        android:textSize="25dp">
-    </TextView>
+        android:textColor="#B5003D"
+        android:textSize="25dp"></TextView>
+
     <TextView
         android:id="@+id/comp_iso_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/comp_iso_header"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
         android:gravity="center_horizontal"
         android:text="@string/comp_iso_desc"
-        android:textSize="18dp">
-    </TextView>
+        android:textColor="#F8F5F5"
+        android:textSize="18dp"></TextView>
+
 </RelativeLayout>
 </ScrollView>
