@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 
+// Render the landing page (the title screen) ans set up the buttons
+
 class LandingPage : AppCompatActivity() {
 
     private lateinit var learnMore: Button
