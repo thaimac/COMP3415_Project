@@ -263,6 +263,7 @@ class MainActivity : AppCompatActivity() {
         assignProfile(user)
     }
 
+    // function to create and assign profiles based on point distribution 
     private fun assignProfile(user: User) {
         var points = 0
 
